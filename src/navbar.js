@@ -10,9 +10,11 @@ const NavBar = () => {
         </div>
 
         <div className="center-nav-bar">
-          <div className="search-bar">
-            <input type="text" placeholder="Search for a Realtor" />
-          </div>
+          <input
+            className="search-bar"
+            type="text"
+            placeholder="Search for a Realtor"
+          />
         </div>
 
         <div className="right-side-nav-bar">

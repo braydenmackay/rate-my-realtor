@@ -5,7 +5,7 @@ const Login = () => {
     <div className="login-page">
       <div className="left-side-login">
         <form>
-          <p>Sign Up</p>
+          <div className="left-side-header">Sign Up</div>
           <div className="two-column">
             <input type="text" placeholder="First Name" />
             <input type="text" placeholder="Last Name" />
@@ -27,10 +27,10 @@ const Login = () => {
       </div>
 
       <div className="right-side-login">
-        <p>Login</p>
+        <div className="right-side-header">Login</div>
         <div className="login-container">
-          <input type="email" placeholder="email" />
-          <input type="password" placeholder="Password" />
+          <input className="input-box" type="email" placeholder="email" />
+          <input className="input-box" type="password" placeholder="Password" />
           <button className="btn">Submit</button>
         </div>
       </div>

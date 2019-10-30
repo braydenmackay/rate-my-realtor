@@ -1,16 +1,17 @@
-.App {
+body {
   margin: 0;
-  padding: 0;
 }
 
+/* navbar styles */
 .nav-bar {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid black;
+  height: 100px;
 }
 
 .left-side-nav-bar {
-  margin: 10px;
+  margin: 30px;
   padding: 10px;
 }
 
@@ -20,12 +21,17 @@
 }
 
 .center-nav-bar {
-  margin: 10px;
+  margin: 30px;
   padding: 10px;
 }
 
+.search-bar {
+  height: 30px;
+  width: 50vw;
+}
+
 .right-side-nav-bar {
-  margin: 10px;
+  margin: 30px;
   padding: 10px;
 }
 
@@ -34,11 +40,16 @@
   color: black;
 }
 
+/* home page styles */
+.home-page {
+  height: 100vh;
+}
+
 .links-wrapper {
   padding: 50px;
-  margin: 35px 100px;
+  margin-top: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
 }
 
@@ -70,16 +81,26 @@
 
 .body-text {
   text-align: center;
-  margin: 35px;
-  margin-bottom: 175px;
 }
 
+.sign-up-btn {
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+/* footer styles */
 .footer-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid black;
-  height: 50px;
+  height: 100px;
+  position: absolute;
+  width: 100vw;
+  top: 100%;
 }
 
 .logo-footer {
@@ -91,4 +112,178 @@
 .logo-footer a {
   text-decoration: none;
   color: black;
+}
+
+/* login page styles */
+.login-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 70px;
+}
+
+.left-side-login {
+  display: grid;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.left-side-header {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 10px 0px 25px 0px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 10vh;
+  width: 35vw;
+}
+
+.one-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 10vh;
+}
+
+.right-side-login {
+  display: grid;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.right-side-header {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 10px 0px 25px 0px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  height: 10vh;
+  width: 35vw;
+}
+
+.btn {
+  width: 80px;
+  height: 25px;
+}
+
+/* leave a rating page styles */
+.leave-rating-wrapper {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.leave-rating-header {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.leave-rating-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: grid;
+  margin: 0px 0px 40px 0px;
+}
+
+.leave-rating-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 10vh;
+  width: 50vw;
+}
+
+.leave-rating-review {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 250px;
+}
+
+/* top rated page styles */
+.top-rated-container {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: 70px;
+}
+
+.top-rated-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+.top-rated-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-rated-name-location {
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.top-rated-rating {
+  margin-bottom: 20px;
+}
+
+.btn-link {
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* view realtor page */
+.view-realtor-page {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.view-realtor-name-pic-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.view-realtor-pic {
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+}
+
+.view-realtor-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.view-realtor-review {
+  margin: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  width: 70vw;
 }
