@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const TopRated = () => {
   return (
     <div className="top-rated-page">
-      <div className="select-location-rating">
+      {/* <div className="select-location-rating">
         <select>
           <option defaultValue>Location</option>
           <option>Utah</option>
@@ -21,7 +21,7 @@ const TopRated = () => {
           <option>2 stars</option>
           <option>1 stars</option>
         </select>
-      </div>
+      </div> */}
 
       <div className="top-rated-container">
         <div className="top-rated-pic">pic</div>

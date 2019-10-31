@@ -31,7 +31,7 @@ const Home = () => {
         </div>
 
         <div className="see-top-rated">
-          <Link to="/top-rated">See Top Rated Realtors Near Me</Link>
+          <Link to="/top-rated">See Realtors</Link>
         </div>
       </div>
 
