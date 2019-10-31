@@ -19,7 +19,7 @@ const LeaveRating = () => {
             />
           </div>
 
-          <div classNamme="leave-rating-one-column">
+          <div className="leave-rating-one-column">
             <div className="leave-rating-review">
               <input type="text" placeholder="Write your review here." />
             </div>

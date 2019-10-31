@@ -12,6 +12,12 @@ import Login from "./Login"
 import ViewRealtor from "./ViewRealtor"
 
 function App() {
+  // const [formSubmitted, setFormSubmitted] = React.useState(false)
+
+  // const handleSubmitted = () => {
+  //   setFormSubmitted(!formSubmitted)
+  // }
+
   return (
     <div className="App">
       <Router>

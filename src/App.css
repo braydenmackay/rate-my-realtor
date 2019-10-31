@@ -83,12 +83,37 @@ body {
   text-align: center;
 }
 
-.sign-up-btn {
-  font-size: 2em;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
   margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-grid {
+  display: grid;
+  width: 30vw;
+  border: 1px solid grey;
+}
+
+.home-page-name {
+  height: 35px;
+  border: 1px solid grey;
+}
+
+.home-page-email {
+  grid-template-columns: 1fr;
+  height: 35px;
+  border: 1px solid grey;
+}
+
+.sign-up-btn {
+  cursor: pointer;
+  margin-top: 5px;
+  width: 80px;
+  height: 25px;
+  border-radius: 5px;
 }
 
 /* footer styles */
@@ -174,6 +199,8 @@ body {
 .btn {
   width: 80px;
   height: 25px;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 
 /* leave a rating page styles */
