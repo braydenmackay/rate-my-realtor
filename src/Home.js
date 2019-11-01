@@ -43,32 +43,35 @@ const Home = () => {
       <div className="sign-up-form">
         <form onSubmit={handleOnClick}>
           <div className="sign-up-grid">
-            <input
-              onChange={event => setFirst(event.target.value)}
-              className="home-page-name"
-              type="text"
-              placeholder="First Name"
-              value={first}
-            />
-            <input
-              onChange={event => setLast(event.target.value)}
-              className="home-page-name"
-              type="text"
-              placeholder="Last Name"
-              value={last}
-            />
-
+            <p>Full Name</p>
+            <div className="home-page-grid-two-column">
+              <input
+                onChange={event => setFirst(event.target.value)}
+                className="home-page-name"
+                type="text"
+                placeholder="First"
+                value={first}
+              />
+              <input
+                onChange={event => setLast(event.target.value)}
+                className="home-page-name"
+                type="text"
+                placeholder="Last"
+                value={last}
+              />
+            </div>
+            <p>Email</p>
             <input
               onChange={event => setEmail(event.target.value)}
               className="home-page-email"
+              placeholder="someone@example.com"
               type="email"
-              placeholder="Email"
               value={email}
             />
+            <button className="sign-up-btn" type="submit">
+              Submit
+            </button>
           </div>
-          <button className="sign-up-btn" type="submit">
-            Submit
-          </button>
         </form>
       </div>
     </div>

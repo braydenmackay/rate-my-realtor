@@ -6,7 +6,7 @@ const NavBar = () => {
     <div className="nav-bar-wrapper">
       <div className="nav-bar">
         <div className="left-side-nav-bar">
-          <Link to="./">Home/Logo</Link>
+          <Link to="./">Home</Link>
         </div>
 
         <div className="center-nav-bar">

@@ -1,59 +1,47 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
+import Axios from "axios"
+import defaultPicture from "./image/default-profile.png"
 
 const TopRated = () => {
-  return (
-    <div className="top-rated-page">
-      {/* <div className="select-location-rating">
-        <select>
-          <option defaultValue>Location</option>
-          <option>Utah</option>
-          <option>Another state</option>
-          <option>Another state</option>
-          <option>etc...</option>
-        </select>
+  const [info, setInfo] = React.useState([])
 
-        <select>
-          <option defaultValue>Rating</option>
-          <option>5 stars</option>
-          <option>4 stars</option>
-          <option>3 stars</option>
-          <option>2 stars</option>
-          <option>1 stars</option>
-        </select>
-      </div> */}
+  useEffect(() => {
+    Axios.get("https://haunted-moonlight-21086.herokuapp.com/reviews").then(
+      response => setInfo(response.data)
+    )
+  }, [])
 
-      <div className="top-rated-container">
-        <div className="top-rated-pic">pic</div>
-        <div className="top-rated-info-container">
-          <div className="top-rated-name-location">Name / Location</div>
-          <div className="top-rated-rating">Rating / num of reviews</div>
-          <div className="top-rated-link">
-            <Link to="/view-realtor">
-              <button className="btn-link">
-                Click here to see all reviews
-              </button>
-            </Link>
+  const renderReviews = () => {
+    return info.map(results => {
+      return (
+        <div className="top-rated-page">
+          <div className="top-rated-container">
+            <div
+              className="top-rated-pic"
+              style={{
+                backgroundImage: `url(${defaultPicture})`
+              }}
+            ></div>
+            <div className="top-rated-info-container">
+              <div className="top-rated-name-location">
+                {results.name} / {results.city}, {results.state}
+              </div>
+              <div className="top-rated-rating">{results.rating} Stars</div>
+              <div className="top-rated-link">
+                <Link to="/view-realtor">
+                  <button className="btn-link">
+                    Click here to see reviews
+                  </button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="top-rated-container">
-        <div className="top-rated-pic">pic</div>
-        <div className="top-rated-info-container">
-          <div className="top-rated-name-location">Name / Location</div>
-          <div className="top-rated-rating">Rating / num of reviews</div>
-          <div className="top-rated-link">
-            <Link to="/view-realtor">
-              <button className="btn-link">
-                Click here to see all reviews
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+      )
+    })
+  }
+  return <div>{renderReviews()}</div>
 }
 
 export default TopRated
