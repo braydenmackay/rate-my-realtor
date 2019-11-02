@@ -40,23 +40,39 @@ const Login = () => {
           <div className="grid-wrapper">
             <p>Full Name</p>
             <div className="two-column">
-              <input type="text" placeholder="First" />
-              <input type="text" placeholder="Last" />
+              <input
+                className="sign-up-input"
+                type="text"
+                placeholder="First"
+              />
+              <input className="sign-up-input" type="text" placeholder="Last" />
             </div>
 
             <p>Email</p>
             <div className="one-column">
-              <input type="email" placeholder="somebody@example.com" />
+              <input
+                className="sign-up-input"
+                type="email"
+                placeholder="somebody@example.com"
+              />
             </div>
 
             <p>Password</p>
             <div className="one-column">
-              <input type="password" placeholder="Password" />
+              <input
+                className="sign-up-input"
+                type="password"
+                placeholder="Password"
+              />
             </div>
 
             <p>Confirm Password</p>
             <div className="one-column">
-              <input type="password" placeholder="Confirm Password" />
+              <input
+                className="sign-up-input"
+                type="password"
+                placeholder="Confirm Password"
+              />
             </div>
             <button className="btn" type="submit">
               Submit
