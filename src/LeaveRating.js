@@ -48,7 +48,7 @@ const LeaveRating = () => {
                 onChange={event => setName(event.target.value)}
                 className="leave-rating-realtor-name"
                 type="text"
-                placeholder="Name"
+                placeholder="Full name"
                 value={name}
               />
 

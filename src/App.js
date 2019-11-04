@@ -21,7 +21,7 @@ function App() {
           <Route path="/top-rated" component={TopRated} />
           <Route path="/leave-rating" component={LeaveRating} />
           <Route path="/login" component={Login} />
-          <Route path="/view-realtor" component={ViewRealtor} />
+          <Route path="/view-realtor/:slug" component={ViewRealtor} />
         </Switch>
       </Router>
     </div>

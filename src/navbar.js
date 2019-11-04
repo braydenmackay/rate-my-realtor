@@ -6,7 +6,7 @@ const NavBar = () => {
     <div className="nav-bar-wrapper">
       <div className="nav-bar">
         <div className="left-side-nav-bar">
-          <Link to="./">Home</Link>
+          <Link to="/">Home</Link>
         </div>
 
         <div className="center-nav-bar">
@@ -19,7 +19,7 @@ const NavBar = () => {
 
         <div className="right-side-nav-bar">
           <div className="Login-nav-bar">
-            <Link to="./login">Login/Sign Up</Link>
+            <Link to="/login">Login/Sign Up</Link>
           </div>
         </div>
       </div>
