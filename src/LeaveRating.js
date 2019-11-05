@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import Axios from "axios"
+import axios from "axios"
 
 const LeaveRating = () => {
   const [name, setName] = React.useState("")
@@ -12,14 +12,15 @@ const LeaveRating = () => {
 
   const handleOnClick = e => {
     e.preventDefault()
-    Axios.post("https://haunted-moonlight-21086.herokuapp.com/review", {
-      name: name,
-      rating: rating,
-      brokerage: brokerage,
-      city: city,
-      state: state,
-      review: review
-    })
+    axios
+      .post("https://haunted-moonlight-21086.herokuapp.com/review", {
+        name: name,
+        rating: rating,
+        brokerage: brokerage,
+        city: city,
+        state: state,
+        review: review
+      })
       .then(response => {
         setName("")
         setRating(0)

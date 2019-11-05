@@ -1,15 +1,15 @@
 import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
-import Axios from "axios"
+import axios from "axios"
 import defaultPicture from "./image/default-profile.png"
 
 const TopRated = () => {
   const [info, setInfo] = React.useState([])
 
   useEffect(() => {
-    Axios.get("https://haunted-moonlight-21086.herokuapp.com/reviews").then(
-      response => setInfo(response.data)
-    )
+    axios
+      .get("https://haunted-moonlight-21086.herokuapp.com/reviews")
+      .then(response => setInfo(response.data))
   }, [])
 
   const renderReviews = () => {
