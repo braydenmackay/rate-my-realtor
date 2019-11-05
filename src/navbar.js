@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
+import Search from "./searchbar"
+
 const NavBar = () => {
   return (
     <div className="nav-bar-wrapper">
@@ -10,11 +12,7 @@ const NavBar = () => {
         </div>
 
         <div className="center-nav-bar">
-          <input
-            className="search-bar"
-            type="text"
-            placeholder="Search for a Realtor"
-          />
+          <Search />
         </div>
 
         <div className="right-side-nav-bar">

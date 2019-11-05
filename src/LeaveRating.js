@@ -34,7 +34,7 @@ const LeaveRating = () => {
   return (
     <div className="leave-rating-page">
       <Link to="/top-rated" className="link-to-see-realtors">
-        <button className="btn-see-realtors">See Realtors</button>
+        See Realtors
       </Link>
       <div className="leave-rating-wrapper">
         <div className="leave-rating-header">
