@@ -1,18 +1,12 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-import Search from "./searchbar"
-
 const NavBar = props => {
   return (
     <div className="nav-bar-wrapper">
       <div className="nav-bar">
         <div className="left-side-nav-bar">
           <Link to="/">Home</Link>
-        </div>
-
-        <div className="center-nav-bar">
-          <Search />
         </div>
 
         <div className="right-side-nav-bar">

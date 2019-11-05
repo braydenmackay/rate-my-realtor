@@ -4,8 +4,6 @@ import "./App.css"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import NavBar from "./navbar"
-// import Footer from "./footer"
-
 import Home from "./Home"
 import TopRated from "./TopRated"
 import LeaveRating from "./LeaveRating"
