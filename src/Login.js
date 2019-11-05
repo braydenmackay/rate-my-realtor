@@ -5,6 +5,7 @@ const Login = props => {
   const [email, setEmail] = React.useState("")
   const [password, setPassword] = React.useState("")
   const [errorText, setErrorText] = React.useState("")
+  const [loginText, setLoginText] = React.useState("")
 
   const correctEmail = "admin@ratemyrealtor.com"
   const correctPassword = "rmr123"
@@ -24,6 +25,7 @@ const Login = props => {
       setEmail("")
       setPassword("")
       setErrorText("")
+      setLoginText("Welcome Admin!")
       Cookie.set("EMAIL", email)
       Cookie.set("PASSWORD", password)
     } else {
@@ -33,10 +35,10 @@ const Login = props => {
 
   return (
     <div className="login-page">
-      <div className="left-side-login">
+      {/* <div className="left-side-login">
         <div className="left-side-header">Sign Up</div>
         <div className="form-wrapper">
-          {/* <form onSubmit={handleSubmit}> */}
+          <form onSubmit={handleSubmit}>
           <div className="grid-wrapper">
             <p>Full Name</p>
             <div className="two-column">
@@ -78,11 +80,12 @@ const Login = props => {
               Submit
             </button>
           </div>
-          {/* </form> */}
+          </form>
         </div>
-      </div>
+      </div> */}
 
       <div className="right-side-login">
+        <h1 className="login-heading-text">{loginText}</h1>
         <div className="right-side-header">Login</div>
         <div className="form-wrapper">
           <form onSubmit={handleSubmit}>

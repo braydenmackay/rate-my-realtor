@@ -161,6 +161,11 @@ body {
   margin: 50px 0px 100px 0px;
 }
 
+.login-heading-text {
+  text-align: center;
+  color: black;
+}
+
 .form-wrapper {
   display: grid;
   border-radius: 5px;

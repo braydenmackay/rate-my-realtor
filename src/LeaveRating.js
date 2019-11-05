@@ -9,6 +9,7 @@ const LeaveRating = () => {
   const [city, setCity] = React.useState("")
   const [state, setState] = React.useState("")
   const [review, setReview] = React.useState("")
+  const [reviewText, setReviewText] = React.useState("")
 
   const handleOnClick = e => {
     e.preventDefault()
@@ -27,8 +28,9 @@ const LeaveRating = () => {
         setBrokerage("")
         setCity("")
         setState("")
-        setReview("")
+        setReviewText("Your review was submitted!")
       })
+
       .catch(error => console.log("handleOnClick error", error))
   }
 
@@ -39,6 +41,7 @@ const LeaveRating = () => {
       </Link>
       <div className="leave-rating-wrapper">
         <div className="leave-rating-header">
+          <p>{reviewText}</p>
           <p>Leave a Rating</p>
         </div>
         <div className="leave-rating-container">
