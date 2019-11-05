@@ -1,9 +1,9 @@
 import React from "react"
+import Cookie from "js-cookie"
 
-const Login = () => {
+const Login = props => {
   const [email, setEmail] = React.useState("")
   const [password, setPassword] = React.useState("")
-  const [loginStatus, setLoginStatus] = React.useState("NOT_LOGGEDIN")
   const [errorText, setErrorText] = React.useState("")
 
   const correctEmail = "admin@ratemyrealtor.com"
@@ -20,14 +20,14 @@ const Login = () => {
   const handleSubmit = event => {
     event.preventDefault()
     if (email === correctEmail && password === correctPassword) {
-      setLoginStatus("LOGGEDIN")
+      props.handleSignIn()
       setEmail("")
       setPassword("")
       setErrorText("")
+      Cookie.set("EMAIL", email)
+      Cookie.set("PASSWORD", password)
     } else {
-      setLoginStatus("NOT_LOGGEDIN")
       setErrorText("Email or password incorrect")
-      console.log(loginStatus)
     }
   }
 
@@ -96,7 +96,7 @@ const Login = () => {
                 placeholder="somebody@example.com"
                 value={email}
                 onChange={handleEmailChange}
-                key=""
+                required
               />
               <p>Password</p>
               <input
@@ -106,6 +106,7 @@ const Login = () => {
                 placeholder="Password"
                 value={password}
                 onChange={handlePasswordChange}
+                required
               />
               <button className="btn" type="submit">
                 Submit

@@ -28,6 +28,7 @@ const TopRated = () => {
                 {results.name} / {results.city}, {results.state}
               </div>
               <div className="top-rated-rating">{results.rating} Stars</div>
+
               <div className="top-rated-link" key={results.id}>
                 <Link
                   to={{

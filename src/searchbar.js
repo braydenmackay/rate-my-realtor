@@ -1,7 +1,7 @@
 import React from "react"
 import Axios from "axios"
 
-const Search = props => {
+const Search = () => {
   const [searchValue, setSearchValue] = React.useState("")
 
   const handleSearchInputChanges = e => {

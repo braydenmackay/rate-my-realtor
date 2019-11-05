@@ -50,12 +50,14 @@ const LeaveRating = () => {
                 type="text"
                 placeholder="Full name"
                 value={name}
+                required
               />
 
               <select
                 onChange={event => setRating(event.target.value)}
                 className="leave-rating-realtor-rating"
                 value={rating}
+                required
               >
                 <option defaultValue>How many stars?</option>
                 <option>5</option>
@@ -73,6 +75,7 @@ const LeaveRating = () => {
                 type="text"
                 placeholder="Brokerage"
                 value={brokerage}
+                required
               />
             </div>
             <p>Location</p>
@@ -83,12 +86,14 @@ const LeaveRating = () => {
                 type="text"
                 placeholder="City"
                 value={city}
+                required
               />
 
               <select
                 onChange={event => setState(event.target.value)}
                 className="leave-rating-realtor-rating"
                 value={state}
+                required
               >
                 <option defaultValue>State</option>
                 <option>AL</option>
@@ -152,6 +157,7 @@ const LeaveRating = () => {
                 type="text"
                 placeholder="Write your review here..."
                 value={review}
+                required
               />
             </div>
             <button className="btn-leave-rating" type="submit">

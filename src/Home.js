@@ -51,6 +51,7 @@ const Home = () => {
                 type="text"
                 placeholder="First"
                 value={first}
+                required
               />
               <input
                 onChange={event => setLast(event.target.value)}
@@ -58,6 +59,7 @@ const Home = () => {
                 type="text"
                 placeholder="Last"
                 value={last}
+                required
               />
             </div>
             <p>Email</p>
@@ -67,6 +69,7 @@ const Home = () => {
               placeholder="someone@example.com"
               type="email"
               value={email}
+              required
             />
             <button className="sign-up-btn" type="submit">
               Submit
