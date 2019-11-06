@@ -6,6 +6,8 @@ const Home = () => {
   const [first, setFirst] = React.useState("")
   const [last, setLast] = React.useState("")
   const [email, setEmail] = React.useState("")
+  const [textOne, setTextOne] = React.useState("SITE LAUNCHING SOON!!")
+  const [textTwo, setTextTwo] = React.useState("SIGN UP TO GET NOTIFIED!!!!")
 
   const handleOnClick = e => {
     e.preventDefault()
@@ -19,6 +21,8 @@ const Home = () => {
         setFirst("")
         setLast("")
         setEmail("")
+        setTextOne("Thank You for signing up!")
+        setTextTwo("You will be notified by email when the site launches.")
       })
       .catch(error => console.log("handleOnClick error", error))
   }
@@ -36,8 +40,8 @@ const Home = () => {
       </div>
 
       <div className="body-text">
-        <h1>SITE LAUNCHING SOON!!</h1>
-        <h1>SIGN UP TO GET NOTIFIED!!!!</h1>
+        <h1>{textOne}</h1>
+        <h1>{textTwo}</h1>
       </div>
 
       <div className="sign-up-form">
