@@ -5,7 +5,6 @@ const Login = props => {
   const [email, setEmail] = React.useState("")
   const [password, setPassword] = React.useState("")
   const [errorText, setErrorText] = React.useState("")
-  const [loginText, setLoginText] = React.useState("")
 
   const correctEmail = "admin@ratemyrealtor.com"
   const correctPassword = "rmr123"
@@ -25,9 +24,9 @@ const Login = props => {
       setEmail("")
       setPassword("")
       setErrorText("")
-      setLoginText("Welcome Admin!")
       Cookie.set("EMAIL", email)
       Cookie.set("PASSWORD", password)
+      props.history.push("/")
     } else {
       setErrorText("Email or password incorrect")
     }
@@ -85,7 +84,6 @@ const Login = props => {
       </div> */}
 
       <div className="right-side-login">
-        <h1 className="login-heading-text">{loginText}</h1>
         <div className="right-side-header">Login</div>
         <div className="form-wrapper">
           <form onSubmit={handleSubmit}>
